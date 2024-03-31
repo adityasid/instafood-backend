@@ -10,6 +10,7 @@ const port = process.env.PORT || 4000;
 app.use("/static", express.static("dist"));
 
 app.use("/", (req, res) => {
+  console.log("/");
   res.send("<h1>Hello InstaFood lovers!</h1>");
 });
 
