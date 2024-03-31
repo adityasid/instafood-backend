@@ -7,7 +7,11 @@ const app = express();
 
 const port = process.env.PORT || 4000;
 
-app.use(express.static("dist"));
+app.use("/static", express.static("dist"));
+
+app.use("/", (req, res) => {
+  res.send("<h1>Hello InstaFood lovers!</h1>");
+});
 
 app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`);
