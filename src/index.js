@@ -1,18 +1,9 @@
-import express from "express";
 import dotenv from "dotenv";
-dotenv.config({
-  path: "./.env",
-});
-const app = express();
+import app from "./app.js";
+
+dotenv.config({ path: "./.env" });
 
 const port = process.env.PORT || 4000;
-
-app.use("/static", express.static("dist"));
-
-app.use("/", (req, res) => {
-  console.log("/");
-  res.send("<h1>Hello InstaFood lovers!</h1>");
-});
 
 app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`);
