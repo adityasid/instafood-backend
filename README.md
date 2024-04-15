@@ -76,13 +76,13 @@ const data = await response.json();
 - Usage : In react app , you can hit this API like mentioned below 
 
 ```javascript
-fetch(`https://instafood.onrender.com/api/menu?lat=${latitude}&lng=${longitude}&restaurantId=${restaurantId}`)
+fetch(`https://api-instafood.onrender.com/api/menu?lat=${latitude}&lng=${longitude}&restaurantId=${restaurantId}`)
 ```
 
 Example :
 
 ```javascript
-const response =  await fetch("https://instafood.onrender.com/api/menu?lat=12.9351929&lng=77.62448069999999&restaurantId=113657")
+const response =  await fetch("https://api-instafood.onrender.com/api/menu?lat=12.9351929&lng=77.62448069999999&restaurantId=113657")
 
 const data = await response.json();
 
